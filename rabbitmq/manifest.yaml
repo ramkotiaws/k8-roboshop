@@ -41,6 +41,9 @@ spec:
       containers:
       - name: rabbitmq
         image: rabbitmq:3
+        envFrom:
+        - secretRef:
+          name: rabbitmq
 ---
 apiVersion: v1
 kind: Service
